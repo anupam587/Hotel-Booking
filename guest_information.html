@@ -1,0 +1,170 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<title>Guest Information</title>
+<style type="text/css">
+body{
+	width:100%;
+}
+#totalbody{
+    margin-left:300px;
+	width:650px;
+	height:auto;
+}
+#logo{
+	width:650px;
+	height:auto;
+}
+#guestdetail{
+    margin-top:20px;
+	width:650px;
+	height:auto;
+}
+#carddetail{
+    margin-top:20px;
+	width:650px;
+	height:auto;
+}
+.heading{
+	width:650px;
+	height:30px;
+	background-color:#CCCCCC;
+	color:white;
+	font-size:1.3em;
+	text-align:center;
+	margin-top:20px;
+}
+.inputbox{
+	margin-left:30px;
+	border:1px solid #292929;
+    border-radius:3px;
+
+}
+#guestcontent{
+	margin-top:20px;
+}
+#cardcontent{
+	margin-top:20px;
+	border-bottom:2px solid #999966;
+}
+#attention{
+	background-color:#999966;
+	border:2px solid #292929;
+	border-radius:3px;
+	margin-top:10px;
+}
+</style>
+</head>
+
+<body>
+<?php
+$con = mysql_connect("localhost","root","anupam");
+
+    if (!$con)
+    {
+     die('Could not connect: ' . mysql_error());
+    }
+    mysql_select_db("hotel", $con);
+?>
+<div id="totalbody">
+<div id="logo">
+<img src="banner(747x130).jpg" style="width:650px;height:60px"/>
+</div>
+<div id="guestdetail">
+<div class="heading">Guest Details</div>
+<div id="guestcontent">
+<table border="0" cellspacing="" cellpadding="">
+<tr>
+<td>Guest Name* </td>
+<td><input class="inputbox" type="text"/></td>
+</tr>
+<tr>
+<td>Company Name</td>
+<td><input class="inputbox"  type="text"/></td>
+</tr>
+<tr>
+<td>Address* </td>
+<td><textarea class="inputbox"></textarea></td>
+</tr>
+<tr>
+<td>City* </td>
+<td><input class="inputbox"  type="text"/></td>
+<td>Contry* </td>
+<td><input class="inputbox"  type="text"/></td>
+
+</tr>
+<tr>
+<td>State* </td>
+<td><input class="inputbox"  type="text"/></td>
+<td>Postal Code* </td>
+<td><input class="inputbox"  type="text"/></td>
+
+</tr>
+<tr>
+<td>Phone* </td>
+<td><input class="inputbox"  type="text"/></td>
+
+</tr>
+<tr>
+<td>E-mail* </td>
+<td><input class="inputbox"  type="text"/></td>
+</tr>
+
+</table>
+</div>
+</div>
+<div id="carddetail">
+<div class="heading">Card Details</div>
+<div id="cardcontent">
+<table border="0" cellspacing="" cellpadding="">
+<tr>
+<td>Card Number* :</td>
+<td><input class="inputbox" type="text"/></td>
+<td>Card Type* :</td>
+<td><select class="inputbox">
+<option>Master Card</option>
+<option>Visa</option>
+</select></td>
+</tr>
+<tr>
+<td>Expiry Date* :</td>
+<td>
+<select class="inputbox">
+<option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option>
+<option>7</option><option>8</option><option>9</option><option>10</option><option>11</option><option>12</option>
+</select>
+/
+<select class="inputbox">
+<option>2013</option><option>2014</option><option>2015</option><option>2016</option><option>2017</option><option>2018</option>
+<option>2019</option><option>2020</option><option>2021</option><option>2022</option><option>2023</option><option>2024</option>
+</select>
+</td>
+</tr>
+<tr>
+<td>Card Holder Name* :</td>
+<td><input class="inputbox" type="text"/></td>
+<td>Card Id* :</td>
+<td><input class="inputbox" type="text"/></td>
+</tr>
+</table>
+</div> 
+</div>
+<div id="attention">
+<p style="font-size:1.2em;border-bottom:2px solid gray;font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif">Attention Note:</p>
+<p >We reserve the right to cancel or modify reservations where it appears that a customer has engaged in fraudulent
+or inappropriate activity or under other circumstances where it appears that the reservations contain or resulted
+from a mistake or error.</p>
+</div>
+<div id="checkpolicy" style="margin-top:15px;">
+<input type="checkbox"/>
+ I have read and understood the Cancellation and Other Policy and agree to it
+</div>
+<div id="reserve">
+<input type="submit" onclick="" style="background-color:#999966; margin-top:20px; margin-right:135px;color:white; border-radius:5px; width:150px; height:30px; font-size:1em;" value="ConfirmReservation"/>
+</div>
+</div>
+</body>
+
+</html>

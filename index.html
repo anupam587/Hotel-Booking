@@ -1,0 +1,204 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<title>Hotel Reservatoin</title>
+
+<style type="text/css">
+body{
+	width:100%;
+	text-align:center;
+	//background-image:url('url.png');	
+}
+
+#menunavigation{
+	width:400px;
+	height:30px;	
+    padding-top:8px;
+    
+}
+.submenu{
+    list-style:none;
+	width:125px;
+	height:25px;
+	float:left;
+    background-color:#AEC2E8; 
+    margin-left:3px;
+    border:1px solid #292929;
+    border-radius:2px;
+}
+.submenu:hover{
+	background-color:gray;
+	cursor:pointer;
+	color:white;
+}
+#navigation{
+	width:600px;
+	height:40px;
+	margin-top:20px;	
+}
+#totalbody{
+	width:650px;
+	height:auto;
+	margin-left:auto;
+	margin-right:auto;
+}
+#mainbody{
+    margin-top:10px;
+    margin-left:30px;
+	height:220px;
+}
+#roominfoform{
+    margin-top:20px;
+	position:relative;
+	margin-left:120px;
+}
+.inputbox{
+	margin-left:30px;
+	border:1px solid #292929;
+    border-radius:3px;
+}
+.inputdata{
+	font-size:1.1em;
+}
+#submitbutton{
+	margin-bottom:20px;
+}
+#datebox1{
+	margin-left:30px;
+	border:1px solid #292929;
+    border-radius:3px;
+
+}
+#datebox2{
+	margin-left:30px;
+	border:1px solid #292929;
+    border-radius:3px;
+
+}
+
+#logo{
+    margin-left:0px;
+	width:650px;
+	height:50px;
+}
+#mainlogo{
+    margin-left:10px;
+	float:left;
+	height:50px;
+}
+#logopics{
+	float:right;
+	width:500px;
+	height:50px;
+}
+#servicemenubar{
+	margin-top:30px;
+	margin-left:200px;
+	border-top:2px solid #CCCCCC;
+	height:70px;
+	width:400px;
+}
+#searchcontainer{
+	width:450px;
+	height:auto;
+	float:right;
+	background-color:gray;
+	border:2px solid #292929;
+    border-radius:5px;
+    margin-right:10px;
+    margin-top:10px;
+}
+#showcase{
+	width:150px;
+	float:left;
+	margin-left:0px;
+	margin-top:20px;
+	border-right:2px solid gray;
+	height:210px;
+}
+#coverbody{
+	width:650px;
+	border:3px solid #666666;
+	border-radius:4px;
+	height:450px;
+}
+</style>
+<link rel="stylesheet" href="../jquery-ui.css" />
+    <script type="text/javascript" src="../jquery-1.8.2.js"></script>
+    <script type="text/javascript" src="../jquery-ui.js"></script>
+    <link rel="stylesheet" href="../resources/demos/style.css" />
+    <script type="text/javascript" language="javascript">
+    $(function() {
+        $( ".datepicker" ).datepicker();
+    });
+    </script>
+
+</head>
+
+<body>
+<div id="totalbody">
+<div id="logo">
+<img id="mainlogo" src="logo.jpg"/>
+<img id="logopics" src="bannerIdx.jpg" style="width:500px;"/>
+</div>
+<div id="navigation">
+<ul id="menunavigation">
+<a href="hotel_reservation.html"><li class="submenu">Reservation</li></a>
+<li class="submenu">Modification</li>
+<a href="http://localhost/hotelbooking/cancellation.php"><li class="submenu">Cancellation</li></a>
+</ul>
+</div>
+<div id="coverbody">
+<div id="mainbody">
+<div id="showcase">
+<img src="max.jpg"/>
+<img src="package.jpg" style="margin-top:30px;"/>
+</div>
+<form action="http://localhost/hotelbooking/checkaviliabilty.php" method="post">
+<div id="searchcontainer">
+<table id="roominfoform" border="0" cellspacing="" cellpadding="">
+<tr>
+<td class="inputdata">Check-in:  </td>
+<td ><input id="datebox1" type="text" class="datepicker" name="checkin"/></td>
+</tr>
+<tr>
+<td class="inputdata">Check-out:  </td>
+<td ><input id="datebox2" type="text" class="datepicker" name="checkout"/></td>
+</tr>
+<tr>
+<td class="inputdata">Room:  </td>
+<td ><input class="inputbox" type="text" name="noofroom"/></td>
+</tr>
+<tr>
+<td class="inputdata">Adult:  </td>
+<td ><input class="inputbox" type="text" name="adults"/></td>
+</tr>
+<tr>
+<td class="inputdata">Children:  </td>
+<td ><input class="inputbox" type="text" name="childrens"/></td>
+</tr>
+</table>
+<div id="submitbutton">
+<input type="submit" onclick="" style="background-color:#999966; margin-top:20px; margin-right:135px;color:white; border-radius:5px; width:150px; height:30px; font-size:1em;" value="CheckAviliability"/>
+</div>
+</div>
+</form>
+</div>
+<div id="servicemenubar">
+<div style="width:400px;height:30px;font-size:1.1em;background-color:gray;margin-top:5px;color:white;border:1px solid black">Hotel Informaition</div>
+<table border="0" cellspacing="15px" cellpadding="">
+<tr>
+<td><a href="genralinfo.html"><img src="home.jpg"/></a></td>
+<td><a href="http://localhost/hotelbooking/room_and_facilities.php"><img src="roomview.jpg"/></a></td>
+<td><a href="hotelpolicy.html"><img src="policy.jpg"/></a></td>
+</tr>
+</table>
+</div>
+</div>
+</div> 
+
+</body>
+
+</html>
